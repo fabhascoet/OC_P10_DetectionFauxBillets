@@ -25,15 +25,11 @@ else:
 
 ## Préparation des données
 # Création dataframe pour les prédictions sans la colonne ID
-Billets_predict= dataframe.drop("id", axis=1)
+# Billets_predict= dataframe.drop("id", axis=1)
 # Enregistrement des ID dans un dataframe
-ID = dataframe["id"]
+# ID = dataframe["id"]
 
 
-# Choix de l'estimateur
-model_lrg = LogisticRegression()
-# Entrainement du modèle
-model_lrg.fit(X_rlg_train, y_rlg_train)
 
 
 
@@ -57,6 +53,13 @@ for ligne in csv.reader(fp, delimiter=";"):
 # [Sortie] a
 # [Sortie] b
 # [Sortie] Fin de ligne
+
+
+# Choix de l'estimateur
+#model_lrg = LogisticRegression()
+# Entrainement du modèle
+#model_lrg.fit(X_rlg_train, y_rlg_train)
+
 
 ## Prédictions
 # Importation du modèle de prédiction
