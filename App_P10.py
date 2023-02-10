@@ -15,6 +15,4 @@ st.write("Application finale")
 # Import du fichier à analyser (CSV)
 data = st.file_uploader("Déposer les données à analyser")
 
-data = data.drop("id", axis=1)
-
 display(data)
