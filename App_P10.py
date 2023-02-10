@@ -29,6 +29,35 @@ Billets_predict= dataframe.drop("id", axis=1)
 # Enregistrement des ID dans un dataframe
 ID = dataframe["id"]
 
+
+# Choix de l'estimateur
+model_lrg = LogisticRegression()
+# Entrainement du modèle
+model_lrg.fit(X_rlg_train, y_rlg_train)
+
+
+
+import csv
+
+nom_fichier = "https://github.com/fabhascoet/OC_P10_DetectionFauxBillets/blob/main/X_rlg_train.csv" # À remplacer par le chemin vers le fichier :)
+
+# Contenu supposé du fichier :
+# 1;2;3
+# a;b
+
+fp = open(nom_fichier, "r", encoding="utf-8")
+for ligne in csv.reader(fp, delimiter=";"):
+    for cellule in ligne:
+        print(cellule)
+    print("Fin de ligne")
+# [Sortie] 1
+# [Sortie] 2
+# [Sortie] 3
+# [Sortie] Fin de ligne
+# [Sortie] a
+# [Sortie] b
+# [Sortie] Fin de ligne
+
 ## Prédictions
 # Importation du modèle de prédiction
 #url = "https://github.com/fabhascoet/OC_P10_DetectionFauxBillets/blob/main/modele_reg_log.sav"
