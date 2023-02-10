@@ -25,8 +25,8 @@ st.write("Application finale")
 
 
 # Import du fichier à analyser (CSV)
-data = st.file_uploader("Déposer les données à analyser")
-if data is not None:
+uploaded_file = st.file_uploader("Déposer les données à analyser")
+if uploaded_file is not None:
     dataframe = pd.read_csv(uploaded_file)
     st.write(dataframe)
 else:
