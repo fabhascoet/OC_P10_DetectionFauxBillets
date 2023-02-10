@@ -15,6 +15,7 @@ st.write("Application finale")
 
 # Import du fichier à analyser (CSV)
 data = st.file_uploader("Déposer les données à analyser")
-
+import os
+st.dataframe(data)
 #display(data)
 data.info()
