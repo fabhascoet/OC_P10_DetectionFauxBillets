@@ -1,6 +1,7 @@
 # Import des librairies Python
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
 
 # Import des librairies pour Streamlit
 import streamlit as st
@@ -16,3 +17,4 @@ st.write("Application finale")
 data = st.file_uploader("Déposer les données à analyser")
 
 #display(data)
+data.info()
