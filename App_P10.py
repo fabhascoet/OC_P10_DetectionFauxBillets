@@ -29,12 +29,12 @@ Billets_predict= dataframe.drop("id", axis=1)
 # Enregistrement des ID dans un dataframe
 ID = dataframe["id"]
 
-python --version
+print(python --version)
 ## Prédictions
 # Importation du modèle de prédiction
 #url = "https://github.com/fabhascoet/OC_P10_DetectionFauxBillets/blob/main/modele_reg_log.sav"
 #df = pd.read_spss(url)
-pip install --upgrade joblib
+#pip install --upgrade joblib
 #from joblib import load
 
 
