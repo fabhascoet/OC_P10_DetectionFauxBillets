@@ -32,7 +32,7 @@ ID = dataframe["id"]
 #df = pd.read_spss("https://github.com/fabhascoet/OC_P10_DetectionFauxBillets/blob/main/modele_reg_log.sav")
 
 url = "https://github.com/fabhascoet/OC_P10_DetectionFauxBillets/blob/main/modele_reg_log.savv"
-df = pd.read_csv(url)
+df = pd.read_spss(url)
 
 ## Prédictions
 # Importation du modèle de prédiction
