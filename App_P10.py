@@ -19,12 +19,18 @@ st.write("Application finale")
 #st.dataframe(data)
 
 # Import du fichier à analyser (CSV)
-data = st.file_uploader("Déposer les données à analyser")
-if data is not None:
-    st.dataframe(data)
-    data.info()
-else:
-    st.write("Aucun fichier déposé")
+#data = st.file_uploader("Déposer les données à analyser", type=["csv"])
+#if data is not None:
+    #st.dataframe(data)
+    #data.info()
+#else:
+    #st.write("Aucun fichier déposé")
 
 #display(data)
 #data.info()
+
+uploaded_files = st.file_uploader("Choose a CSV file", accept_multiple_files=True)
+for uploaded_file in uploaded_files:
+    bytes_data = uploaded_file.read()
+    st.write("filename:", uploaded_file.name)
+    st.write(bytes_data)
