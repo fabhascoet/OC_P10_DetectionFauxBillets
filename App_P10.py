@@ -29,8 +29,9 @@ else:
 # Enregistrement des ID dans un dataframe
 # ID = dataframe["id"]
 
-#X_train="https://github.com/fabhascoet/OC_P10_DetectionFauxBillets/blob/main/X_rlg_train.csv"
-#Xtrain = pd.read_csv(X_train)
-#Xtrain = pd.read_csv("C:/Users/hasco/OneDrive/Documents/OC_Notebooks_Jupyter/Projet 10/Mission\Data/X_rlg_train.csv")
-url = "https://github.com/fabhascoet/OC_P10_DetectionFauxBillets/blob/main/X_rlg_train.csv"
-df = pd.read_csv(url, encoding='utf-8')
+# Import du fichier à analyser (CSV)
+uploaded_train = st.file_uploader("Déposer les données d'entrainement (X)")
+if uploaded_train is not None:
+    X_train = pd.read_csv(uploaded_train)
+else:
+    st.write("Aucun fichier déposé")
