@@ -36,8 +36,8 @@ ID = dataframe["id"]
 from joblib import load
 
 # Load the model from the file
-model = load("model_lrg.joblib")
-print(model)
+#model = load("model_lrg.joblib")
+#print(model)
 
 ## Prédictions
 # Importation du modèle de prédiction
