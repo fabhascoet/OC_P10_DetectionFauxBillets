@@ -28,3 +28,13 @@ else:
 
 #display(data)
 #data.info()
+
+
+
+st.download_button(
+   "Press to Download",
+   csv,
+   "file.csv",
+   "text/csv",
+   key='download-csv'
+)
