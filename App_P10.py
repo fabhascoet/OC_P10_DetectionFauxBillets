@@ -32,7 +32,7 @@ ID = dataframe["id"]
 
 #url = "https://github.com/fabhascoet/OC_P10_DetectionFauxBillets/blob/main/modele_reg_log.sav"
 #df = pd.read_spss(url)
-
+import joblib
 from joblib import load
 
 # Load the model from the file
