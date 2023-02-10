@@ -28,4 +28,4 @@ else:
     st.write("Aucun fichier déposé")
 
 #display(data)
-data.info()
+#data.info()
