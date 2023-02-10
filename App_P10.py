@@ -4,7 +4,13 @@ import pandas as pd
 
 # Eléments de titre
 st.subheader("Projet 10 : Détection de faux billets 💵")
-st.image(Logo)
+
+from PIL import Image
+
+image = Image.open('Logo.jpg')
+
+st.image(image, caption='Sunrise by the mountains')
+
 st.write("Application finale")
 
 # Sidebar pour import des données
