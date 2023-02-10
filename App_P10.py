@@ -35,15 +35,15 @@ else:
 
 ## Préparation des données
 # Création dataframe pour les prédictions sans la colonne ID
-Billets_predict= dataframe.drop("id", axis=1)
+#Billets_predict= dataframe.drop("id", axis=1)
 # Enregistrement des ID dans un dataframe
-ID = dataframe["id"]
+#ID = dataframe["id"]
 
 
 #url = "https://github.com/fabhascoet/OC_P10_DetectionFauxBillets/blob/main/modele_reg_log.sav"
 #df = pd.read_spss(url)
 
-from joblib import load
+#from joblib import load
 
 # Load the model from the file
 #model = load("model_lrg.joblib")
