@@ -4,7 +4,7 @@ import pandas as pd
 
 # Eléments de titre
 st.subheader("Projet 10 : Détection de faux billets 💵")
-st.image(https://1drv.ms/u/s!AorQVY2bdCT_gtUuO8iKy0g5l_eIQA?e=eaQvsX)
+st.image(Logo)
 st.write("Application finale")
 
 # Sidebar pour import des données
