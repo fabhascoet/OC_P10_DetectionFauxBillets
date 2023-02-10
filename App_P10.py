@@ -14,8 +14,18 @@ st.image(image, caption='Sunrise by the mountains')
 st.write("Application finale")
 
 # Import du fichier à analyser (CSV)
+#data = st.file_uploader("Déposer les données à analyser")
+#import os
+#st.dataframe(data)
+
+# Import du fichier à analyser (CSV)
 data = st.file_uploader("Déposer les données à analyser")
-import os
-st.dataframe(data)
+if data is not None:
+    import os
+    st.dataframe(data)
+    data.info()
+else:
+    st.write("Aucun fichier déposé")
+
 #display(data)
 data.info()
