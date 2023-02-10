@@ -29,7 +29,8 @@ else:
 # Enregistrement des ID dans un dataframe
 # ID = dataframe["id"]
 
-
+X_train="https://github.com/fabhascoet/OC_P10_DetectionFauxBillets/blob/main/X_rlg_train.csv"
+Xtrain = pd.read_csv(X_train)
 
 
 
