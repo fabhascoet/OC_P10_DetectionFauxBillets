@@ -29,9 +29,10 @@ Billets_predict= dataframe.drop("id", axis=1)
 # Enregistrement des ID dans un dataframe
 ID = dataframe["id"]
 
-df = pd.read_spss("https://github.com/fabhascoet/OC_P10_DetectionFauxBillets/blob/main/modele_reg_log.sav")
+#df = pd.read_spss("https://github.com/fabhascoet/OC_P10_DetectionFauxBillets/blob/main/modele_reg_log.sav")
 
-
+url = "https://github.com/fabhascoet/OC_P10_DetectionFauxBillets/blob/main/modele_reg_log.savv"
+df = pd.read_csv(url)
 
 ## Prédictions
 # Importation du modèle de prédiction
