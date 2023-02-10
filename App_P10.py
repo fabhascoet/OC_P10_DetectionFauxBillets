@@ -2,7 +2,8 @@
 import numpy as np
 import pandas as pd
 import os
-#import matplotlib.pyplot as plt
+# Import matplotlib.pyplot as plt
+import pickle # Librairie chargement du modèle
 
 # Import des librairies pour Streamlit
 import streamlit as st
@@ -13,30 +14,29 @@ st.subheader("Projet 10 : Détection de faux billets 💵")
 image = Image.open('Logo.jpg')
 st.image(image, caption='Sunrise by the mountains')
 st.write("Application finale")
+
+## Données à analyser
 # Import du fichier à analyser (CSV)
-#data = st.file_uploader("Déposer les données à analyser")
-#import os
-#st.dataframe(data)
-
-# Import du fichier à analyser (CSV)
-#data = st.file_uploader("Déposer les données à analyser", type=["csv"])
-#if data is not None:
-    #st.dataframe(data)
-    #data.info()
-#else:
-    #st.write("Aucun fichier déposé")
-
-#display(data)
-#data.info()
-
-#uploaded_files = st.file_uploader("Choose a CSV file", accept_multiple_files=True)
-#for uploaded_file in uploaded_files:
-    #bytes_data = uploaded_file.read()
-    #st.write("filename:", uploaded_file.name)
-    #st.write(bytes_data)
-
-    
 uploaded_file = st.file_uploader("Choose a file")
-# Can be used wherever a "file-like" object is accepted:
+# Transformation dataframe à partir du CSV
 dataframe = pd.read_csv(uploaded_file)
+# Affiche le dataframe
 st.write(dataframe)
+
+## Préparation des données
+# Création dataframe pour les prédictions sans la colonne ID
+Billets_predict= dataframe.drop("id", axis=1)
+# Enregistrement des ID dans un dataframe
+ID = dataframe["id"]
+
+df = pd.read_spss("modele_reg_log.sav")
+
+## Prédictions
+# Importation du modèle de prédiction
+
+# ouverture en lecture binaire
+#f = open("modele_reg_log.sav", "rb")
+# et chargement
+#model_lrg = pickle.load(f)
+# fermeture du fichier
+#f.close()
