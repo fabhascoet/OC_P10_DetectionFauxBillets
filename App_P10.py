@@ -14,7 +14,7 @@ st.write("Application finale")
 
 # Import du fichier à analyser (CSV)
 st.write("Importer les données à analyser")
-st.download_button("Download file", file)
+#st.download_button("Download file", file)
 
-st.write("File Uploader - Display a file uploader widget")
+#st.write("File Uploader - Display a file uploader widget")
 data = st.file_uploader("Upload a CSV")
