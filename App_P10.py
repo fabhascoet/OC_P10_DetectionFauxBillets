@@ -29,9 +29,9 @@ else:
 # Enregistrement des ID dans un dataframe
 # ID = dataframe["id"]
 
-X_train="https://github.com/fabhascoet/OC_P10_DetectionFauxBillets/blob/main/X_rlg_train.csv"
-Xtrain = pd.read_csv(X_train)
-
+#X_train="https://github.com/fabhascoet/OC_P10_DetectionFauxBillets/blob/main/X_rlg_train.csv"
+#Xtrain = pd.read_csv(X_train)
+Xtrain = pd.read_csv("C:/Users/hasco/OneDrive/Documents/OC_Notebooks_Jupyter/Projet 10/Mission\Data/X_rlg_train.csv")
 
 import csv
 
