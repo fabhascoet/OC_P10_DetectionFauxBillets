@@ -1,6 +1,7 @@
 # Import des librairies Python
 import numpy as np
 import pandas as pd
+import os
 #import matplotlib.pyplot as plt
 
 # Import des librairies pour Streamlit
@@ -20,7 +21,6 @@ st.write("Application finale")
 # Import du fichier à analyser (CSV)
 data = st.file_uploader("Déposer les données à analyser")
 if data is not None:
-    import os
     st.dataframe(data)
     data.info()
 else:
@@ -28,13 +28,3 @@ else:
 
 #display(data)
 #data.info()
-
-
-
-st.download_button(
-   "Press to Download",
-   csv,
-   "file.csv",
-   "text/csv",
-   key='download-csv'
-)
