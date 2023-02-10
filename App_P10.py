@@ -13,8 +13,6 @@ st.image(image, caption='Sunrise by the mountains')
 st.write("Application finale")
 
 # Import du fichier à analyser (CSV)
-st.write("Importer les données à analyser")
-#st.download_button("Download file", file)
+data = st.file_uploader("Déposer les données à analyser")
 
-#st.write("File Uploader - Display a file uploader widget")
-data = st.file_uploader("Upload a CSV")
+print(data)
