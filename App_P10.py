@@ -15,4 +15,4 @@ st.write("Application finale")
 # Import du fichier à analyser (CSV)
 data = st.file_uploader("Déposer les données à analyser")
 
-display(data)
+#display(data)
