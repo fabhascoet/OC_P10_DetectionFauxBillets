@@ -1,7 +1,7 @@
 # Import des librairies Python
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 # Import des librairies pour Streamlit
 import streamlit as st
