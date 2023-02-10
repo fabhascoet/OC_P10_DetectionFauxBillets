@@ -15,6 +15,22 @@ image = Image.open('Logo.jpg')
 st.image(image, caption='Sunrise by the mountains')
 st.write("Application finale")
 
+st.write("Données d'entrainement")
+# Import du fichier à analyser (CSV)
+uploaded_xtrain = st.file_uploader("Déposer les données d'entrainement (X)")
+if uploaded_xtrain is not None:
+    X_train = pd.read_csv(uploaded_xtrain)
+else:
+    st.write("Aucun fichier déposé")
+
+# Import du fichier à analyser (CSV)
+uploaded_ytrain = st.file_uploader("Déposer les données d'entrainement (Y)")
+if uploaded_ytrain is not None:
+    y_train = pd.read_csv(uploaded_ytrain)
+else:
+    st.write("Aucun fichier déposé")
+
+    
 # Import du fichier à analyser (CSV)
 uploaded_file = st.file_uploader("Déposer les données à analyser")
 if uploaded_file is not None:
@@ -29,9 +45,3 @@ else:
 # Enregistrement des ID dans un dataframe
 # ID = dataframe["id"]
 
-# Import du fichier à analyser (CSV)
-uploaded_train = st.file_uploader("Déposer les données d'entrainement (X)")
-if uploaded_train is not None:
-    X_train = pd.read_csv(uploaded_train)
-else:
-    st.write("Aucun fichier déposé")
