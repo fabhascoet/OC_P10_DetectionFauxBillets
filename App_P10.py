@@ -30,17 +30,15 @@ Billets_predict= dataframe.drop("id", axis=1)
 ID = dataframe["id"]
 
 
+## Prédictions
+# Importation du modèle de prédiction
 #url = "https://github.com/fabhascoet/OC_P10_DetectionFauxBillets/blob/main/modele_reg_log.sav"
 #df = pd.read_spss(url)
-import joblib
 from joblib import load
 
 # Load the model from the file
-#model = load("model_lrg.joblib")
-#print(model)
+model = load("model_lrg.joblib")
 
-## Prédictions
-# Importation du modèle de prédiction
 
 # ouverture en lecture binaire
 #f = open("modele_reg_log.sav", "rb")
