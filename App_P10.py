@@ -15,15 +15,6 @@ image = Image.open('Logo.jpg')
 st.image(image, caption='Sunrise by the mountains')
 st.write("Application finale")
 
-## Données à analyser
-# Import du fichier à analyser (CSV)
-#uploaded_file = st.file_uploader("Choose a file")
-# Transformation dataframe à partir du CSV
-#dataframe = pd.read_csv(uploaded_file)
-# Affiche le dataframe
-#st.write(dataframe)
-
-
 # Import du fichier à analyser (CSV)
 uploaded_file = st.file_uploader("Déposer les données à analyser")
 if uploaded_file is not None:
@@ -32,12 +23,11 @@ if uploaded_file is not None:
 else:
     st.write("Aucun fichier déposé")
 
-
 ## Préparation des données
 # Création dataframe pour les prédictions sans la colonne ID
-#Billets_predict= dataframe.drop("id", axis=1)
+Billets_predict= dataframe.drop("id", axis=1)
 # Enregistrement des ID dans un dataframe
-#ID = dataframe["id"]
+ID = dataframe["id"]
 
 
 #url = "https://github.com/fabhascoet/OC_P10_DetectionFauxBillets/blob/main/modele_reg_log.sav"
