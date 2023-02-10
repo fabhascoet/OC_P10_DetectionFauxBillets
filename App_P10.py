@@ -33,7 +33,6 @@ X_train="https://github.com/fabhascoet/OC_P10_DetectionFauxBillets/blob/main/X_r
 Xtrain = pd.read_csv(X_train)
 
 
-
 import csv
 
 nom_fichier = "https://github.com/fabhascoet/OC_P10_DetectionFauxBillets/blob/main/X_rlg_train.csv" # À remplacer par le chemin vers le fichier :)
