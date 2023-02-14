@@ -64,7 +64,8 @@ ID = dataframe["id"]
 
 
 ## Section 4 : Entraînement du modèle
-from sklearn.linear_model import LogisticRegression 
+pip install sklearn
+#from sklearn.linear_model import LogisticRegression 
 # On choisit "LogisticRegression"
 #model_lrg = LogisticRegression()
 # Entraînement du modèle sur les données
