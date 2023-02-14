@@ -62,9 +62,11 @@ New_billets_predict= dataframe.drop("id", axis=1)
 ID = dataframe["id"]
 
 
+get-pip.py
+
 ## Section 4 : Entraînement du modèle
-from sklearn.linear_model import LogisticRegression 
+#from sklearn.linear_model import LogisticRegression 
 # On choisit "LogisticRegression"
-model_lrg = LogisticRegression()
+#model_lrg = LogisticRegression()
 # Entraînement du modèle sur les données
-model_lrg.fit(uploaded_xtrain, uploaded_ytrain)
+#model_lrg.fit(uploaded_xtrain, uploaded_ytrain)
