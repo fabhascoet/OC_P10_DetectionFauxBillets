@@ -16,6 +16,11 @@ st.image(image, caption='Sunrise by the mountains')
 st.write("Application finale")
 
 st.write("Données d'entrainement")
+
+tab1, tab2 = st.tabs(["Tab 1", "Tab2"])
+tab1.write("This is tab 1")
+
+
 # Import du fichier à analyser (CSV)
 uploaded_xtrain = st.file_uploader("Déposer les données d'entrainement (X)")
 if uploaded_xtrain is not None:
@@ -23,6 +28,7 @@ if uploaded_xtrain is not None:
 else:
     st.write("Aucun fichier déposé")
 
+tab2.write("This is tab 2")
 # Import du fichier à analyser (CSV)
 uploaded_ytrain = st.file_uploader("Déposer les données d'entrainement (Y)")
 if uploaded_ytrain is not None:
