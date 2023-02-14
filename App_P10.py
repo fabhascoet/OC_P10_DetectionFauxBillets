@@ -15,12 +15,12 @@ image = Image.open('Logo.jpg')
 st.image(image, caption='Sunrise by the mountains')
 st.write("Application finale")
 
-st.write("Données d'entrainement")
+st.subheader("Données d'entrainement")
 
+# Création de 2 onglets dans la section
 tab1, tab2 = st.tabs(["Tab 1", "Tab2"])
-tab1.write("This is tab 1")
 
-
+# Informations de la 1ère section
 # Import du fichier à analyser (CSV)
 uploaded_xtrain = tab1.file_uploader("Déposer les données d'entrainement (X)")
 if uploaded_xtrain is not None:
@@ -28,7 +28,7 @@ if uploaded_xtrain is not None:
 else:
     tab1.write("Aucun fichier déposé pour les données d'entrainements (X)")
 
-tab2.write("This is tab 2")
+# Informations de la 1ère section
 # Import du fichier à analyser (CSV)
 uploaded_ytrain = tab2.file_uploader("Déposer les données d'entrainement (Y)")
 if uploaded_ytrain is not None:
