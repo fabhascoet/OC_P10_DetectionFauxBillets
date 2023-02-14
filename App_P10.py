@@ -68,4 +68,3 @@ from sklearn.linear_model import LogisticRegression
 model_lrg = LogisticRegression()
 # Entraînement du modèle sur les données
 model_lrg.fit(uploaded_xtrain, uploaded_ytrain)
-
