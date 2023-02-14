@@ -2,7 +2,7 @@
 import numpy as np
 import pandas as pd
 import os
-
+pip install scikit-learn
 # Import des librairies pour Streamlit
 import streamlit as st
 from PIL import Image # Import d'image
@@ -65,8 +65,6 @@ ID = dataframe["id"]
 
 ## Section 4 : Entraînement du modèle
 #from sklearn.linear_model import LogisticRegression
-#from sklearn import LogisticRegression
-import sklearn as sklearn
 # On choisit "LogisticRegression"
 model_lrg = LogisticRegression()
 # Entraînement du modèle sur les données
