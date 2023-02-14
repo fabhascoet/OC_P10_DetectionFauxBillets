@@ -17,6 +17,8 @@ st.image(image, caption='Logo ONCFM')
 
 
 # Section pour importer les données d'entrainement
+
+# Titre
 st.subheader("Données d'entrainement")
 
 # Création de 2 onglets dans la section
@@ -29,7 +31,6 @@ if uploaded_xtrain is not None:
     X_train = pd.read_csv(uploaded_xtrain)
 else:
     tab1.warning("Aucun fichier déposé pour les données d'entrainements (X)")
-
    
 # Informations de la 2nde section
 # Import du fichier à analyser (CSV)
@@ -37,17 +38,21 @@ uploaded_ytrain = tab2.file_uploader("Déposer les données d'entrainement (Y)")
 if uploaded_ytrain is not None:
     y_train = pd.read_csv(uploaded_ytrain)
 else:
-    tab2.write("Aucun fichier déposé pour les données d'entrainements (Y)")
+    tab2.warning("Aucun fichier déposé pour les données d'entrainements (Y)")
 
 
 # Section pour importer les nouvelles données
+
+# Titre
+st.subheader("Nouvelles données à traiter")
+
 # Import du fichier à analyser (CSV)
 uploaded_file = st.file_uploader("Déposer les données à analyser")
 if uploaded_file is not None:
     dataframe = pd.read_csv(uploaded_file)
     st.write(dataframe)
 else:
-    st.write("Aucun fichier déposé")
+    st.warning("Aucun fichier déposé")
 
 ## Préparation des données
 # Création dataframe pour les prédictions sans la colonne ID
