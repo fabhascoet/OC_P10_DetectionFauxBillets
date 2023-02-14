@@ -15,10 +15,15 @@ image = Image.open('Logo.jpg')
 st.image(image, caption='Sunrise by the mountains')
 st.write("Application finale")
 
+>>>
+
+----
+
+# Section pour importer les données d'entrainement
 st.subheader("Données d'entrainement")
 
 # Création de 2 onglets dans la section
-tab1, tab2 = st.tabs(["Tab 1", "Tab2"])
+tab1, tab2 = st.tabs(["X", "Y"])
 
 # Informations de la 1ère section
 # Import du fichier à analyser (CSV)
