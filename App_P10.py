@@ -44,7 +44,7 @@ else:
 # Section pour importer les nouvelles données
 
 # Titre
-st.subheader("Nouvelles données à traiter")
+st.subheader("Nouvelles données à analyser")
 
 # Import du fichier à analyser (CSV)
 uploaded_file = st.file_uploader("Déposer les données à analyser")
@@ -60,3 +60,12 @@ else:
 # Enregistrement des ID dans un dataframe
 # ID = dataframe["id"]
 
+
+# Création dataframe pour les prédictions sans la colonne ID
+New_billets_predict= dataframe.drop("id", axis=1)
+New_billets_predict
+
+# Enregistrement des ID dans un dataframe
+ID = dataframe["id"]
+
+st.write(ID)
