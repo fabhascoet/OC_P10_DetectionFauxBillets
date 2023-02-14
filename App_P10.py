@@ -16,7 +16,7 @@ st.image(image, caption='Sunrise by the mountains')
 st.write("Application finale")
 
 
-----
+print("----")
 
 # Section pour importer les données d'entrainement
 st.subheader("Données d'entrainement")
