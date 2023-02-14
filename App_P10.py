@@ -2,10 +2,6 @@
 import numpy as np
 import pandas as pd
 import os
-# Import matplotlib.pyplot as plt
-import sklearn
-from sklearn.linear_model import LogisticRegression
-import pickle # Librairie chargement du modèle
 
 # Import des librairies pour Streamlit
 import streamlit as st
@@ -58,6 +54,7 @@ if uploaded_file is not None:
 else:
     st.warning("Aucun fichier déposé pour les nouvelles données")
 
+    
 ## Section 3 : Préparation des données
 
 # Création dataframe pour les prédictions sans la colonne ID
@@ -67,6 +64,7 @@ ID = dataframe["id"]
 
 
 ## Section 4 : Entraînement du modèle
+from sklearn.linear_model import LogisticRegression
 # On choisit "LogisticRegression"
 model_lrg = LogisticRegression()
 # Entraînement du modèle sur les données
