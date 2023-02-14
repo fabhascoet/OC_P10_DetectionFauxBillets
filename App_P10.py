@@ -52,7 +52,6 @@ st.subheader("Nouvelles données à analyser")
 uploaded_file = st.file_uploader("Déposer les données à analyser")
 if uploaded_file is not None:
     dataframe = pd.read_csv(uploaded_file)
-    dataframe.head(3)
     st.success("Données à analyser chargées !")
 else:
     st.warning("Aucun fichier déposé pour les nouvelles données")
@@ -65,5 +64,9 @@ New_billets_predict= dataframe.drop("id", axis=1)
 ID = dataframe["id"]
 
 
-
+## Section 4 : Entraînement du modèle
+# On choisit "LogisticRegression"
+model_lrg = LogisticRegression()
+# Entraînement du modèle sur les données
+model_lrg.fit(uploaded_xtrain, uploaded_ytrain)
 
