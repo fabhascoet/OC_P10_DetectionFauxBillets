@@ -32,7 +32,7 @@ if uploaded_xtrain is not None:
     tab1.success("Données chargées X !")
 else:
     tab1.warning("Aucun fichier déposé pour les données d'entrainements (X)")
-   
+
 # Informations de la 2nde section
 # Import du fichier à analyser (CSV)
 uploaded_ytrain = tab2.file_uploader("Déposer les données d'entrainement (Y)")
@@ -52,7 +52,7 @@ st.subheader("Nouvelles données à analyser")
 uploaded_file = st.file_uploader("Déposer les données à analyser")
 if uploaded_file is not None:
     dataframe = pd.read_csv(uploaded_file)
-    st.write(dataframe)
+    dataframe.head(3)
     st.success("Données à analyser chargées !")
 else:
     st.warning("Aucun fichier déposé pour les nouvelles données")
