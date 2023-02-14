@@ -1,5 +1,3 @@
-conda update --all
-
 # Import des librairies Python
 import numpy as np
 import pandas as pd
