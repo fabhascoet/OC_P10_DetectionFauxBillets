@@ -11,12 +11,10 @@ from PIL import Image # Import d'image
 
 # Eléments de titre
 st.subheader("Projet 10 : Détection de faux billets 💵")
+st.subheader("Application finale")
 image = Image.open('Logo.jpg')
-st.image(image, caption='Sunrise by the mountains')
-st.write("Application finale")
+st.image(image, caption='Logo ONCFM')
 
-
-print("----")
 
 # Section pour importer les données d'entrainement
 st.subheader("Données d'entrainement")
@@ -32,7 +30,7 @@ if uploaded_xtrain is not None:
 else:
     tab1.write("Aucun fichier déposé pour les données d'entrainements (X)")
 
-# Informations de la 1ère section
+# Informations de la 2nde section
 # Import du fichier à analyser (CSV)
 uploaded_ytrain = tab2.file_uploader("Déposer les données d'entrainement (Y)")
 if uploaded_ytrain is not None:
@@ -40,7 +38,7 @@ if uploaded_ytrain is not None:
 else:
     tab2.write("Aucun fichier déposé pour les données d'entrainements (Y)")
 
-    
+
 # Import du fichier à analyser (CSV)
 uploaded_file = st.file_uploader("Déposer les données à analyser")
 if uploaded_file is not None:
