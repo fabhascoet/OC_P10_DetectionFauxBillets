@@ -53,8 +53,9 @@ uploaded_file = st.file_uploader("Déposer les données à analyser")
 if uploaded_file is not None:
     dataframe = pd.read_csv(uploaded_file)
     st.write(dataframe)
+    st.success("Données à analyser chargées !")
 else:
-    st.warning("Aucun fichier déposé")
+    st.warning("Aucun fichier déposé pour les nouvelles données")
 
 ## Section 3 : Préparation des données
 
