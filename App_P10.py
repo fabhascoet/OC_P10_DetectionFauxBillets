@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 import os
 # Import matplotlib.pyplot as plt
+from sklearn.linear_model import LogisticRegression
 import pickle # Librairie chargement du modèle
 
 # Import des librairies pour Streamlit
