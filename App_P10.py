@@ -16,7 +16,7 @@ st.image(image, caption='Logo ONCFM')
 ## Section 1 : importer les données d'entrainement
 
 # Titre
-st.subheader("Données d'entrainement")
+st.subheader("Step 1 : Données d'entrainement")
 
 # Création de 2 onglets dans la section
 tab1, tab2 = st.tabs(["X", "Y"])
@@ -43,7 +43,7 @@ else:
 ## Section 2 : importer les nouvelles données
 
 # Titre
-st.subheader("Nouvelles données à analyser")
+st.subheader("Step 2 : Nouvelles données à analyser")
 
 # Import du fichier à analyser (CSV)
 uploaded_file = st.file_uploader("Déposer les données à analyser")
@@ -56,8 +56,9 @@ else:
     
 ## Section 3 : Préparation des données
 
+
 # Création dataframe pour les prédictions sans la colonne ID
-New_billets_predict= dataframe.drop("id", axis=1)
+New_billets_predict = dataframe.drop("id", axis=1)
 # Enregistrement des ID dans un dataframe
 ID = dataframe["id"]
 
@@ -70,3 +71,6 @@ ID = dataframe["id"]
 #model_lrg = LogisticRegression()
 # Entraînement du modèle sur les données
 #model_lrg.fit(uploaded_xtrain, uploaded_ytrain)
+
+# Titre
+# st.subheader("Step 3 : Prévisions")
