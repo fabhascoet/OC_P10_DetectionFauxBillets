@@ -15,7 +15,6 @@ image = Image.open('Logo.jpg')
 st.image(image, caption='Sunrise by the mountains')
 st.write("Application finale")
 
->>>
 
 ----
 
