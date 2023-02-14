@@ -16,7 +16,7 @@ image = Image.open('Logo.jpg')
 st.image(image, caption='Logo ONCFM')
 
 
-# Section pour importer les données d'entrainement
+## Section 1 : importer les données d'entrainement
 
 # Titre
 st.subheader("Données d'entrainement")
@@ -29,6 +29,7 @@ tab1, tab2 = st.tabs(["X", "Y"])
 uploaded_xtrain = tab1.file_uploader("Déposer les données d'entrainement (X)")
 if uploaded_xtrain is not None:
     X_train = pd.read_csv(uploaded_xtrain)
+    tab1.success("Données chargées X !")
 else:
     tab1.warning("Aucun fichier déposé pour les données d'entrainements (X)")
    
@@ -37,11 +38,12 @@ else:
 uploaded_ytrain = tab2.file_uploader("Déposer les données d'entrainement (Y)")
 if uploaded_ytrain is not None:
     y_train = pd.read_csv(uploaded_ytrain)
+    tab2.success("Données chargées y !")
 else:
     tab2.warning("Aucun fichier déposé pour les données d'entrainements (Y)")
 
 
-# Section pour importer les nouvelles données
+## Section 2 : importer les nouvelles données
 
 # Titre
 st.subheader("Nouvelles données à analyser")
@@ -54,18 +56,13 @@ if uploaded_file is not None:
 else:
     st.warning("Aucun fichier déposé")
 
-## Préparation des données
-# Création dataframe pour les prédictions sans la colonne ID
-# Billets_predict= dataframe.drop("id", axis=1)
-# Enregistrement des ID dans un dataframe
-# ID = dataframe["id"]
-
+## Section 3 : Préparation des données
 
 # Création dataframe pour les prédictions sans la colonne ID
 New_billets_predict= dataframe.drop("id", axis=1)
-New_billets_predict
-
 # Enregistrement des ID dans un dataframe
 ID = dataframe["id"]
 
-st.write(ID)
+
+
+
