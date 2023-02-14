@@ -2,7 +2,6 @@
 import numpy as np
 import pandas as pd
 import os
-pip install scikit-learn
 # Import des librairies pour Streamlit
 import streamlit as st
 from PIL import Image # Import d'image
