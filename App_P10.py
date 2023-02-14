@@ -28,8 +28,9 @@ uploaded_xtrain = tab1.file_uploader("Déposer les données d'entrainement (X)")
 if uploaded_xtrain is not None:
     X_train = pd.read_csv(uploaded_xtrain)
 else:
-    tab1.write("Aucun fichier déposé pour les données d'entrainements (X)")
+    tab1.warning("Aucun fichier déposé pour les données d'entrainements (X)")
 
+   
 # Informations de la 2nde section
 # Import du fichier à analyser (CSV)
 uploaded_ytrain = tab2.file_uploader("Déposer les données d'entrainement (Y)")
@@ -39,6 +40,7 @@ else:
     tab2.write("Aucun fichier déposé pour les données d'entrainements (Y)")
 
 
+# Section pour importer les nouvelles données
 # Import du fichier à analyser (CSV)
 uploaded_file = st.file_uploader("Déposer les données à analyser")
 if uploaded_file is not None:
